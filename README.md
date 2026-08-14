@@ -72,11 +72,11 @@ npm test                      # keyless: loopback double asserts wire shape and 
 TAVILY_API_KEY=tvly-... npm test   # adds the live smoke (self-skips without the key)
 ```
 
-Keyless tests drive the real provider against a loopback HTTP double and assert the exact request shape (method, path, bearer header, user-agent, body fields), response mapping, the error taxonomy, and cancellation. The live smoke verifies the wire contract against the real API and self-skips without a key.
+Keyless tests drive the real provider against a loopback HTTP double and assert the exact request shape (method, path, bearer header, user-agent, body fields), response mapping, the error taxonomy, and cancellation. The live smoke verifies the wire contract against the real API and self-skips without a key; it last passed against the live Tavily API at v0.1.1 (2026-08).
 
 ## Known Limitations and Deferred Work
 
-- **The Tavily wire contract is pinned to its 2026-08 public documentation.** Field names (`search_depth`, `include_answer`, `max_results`) are this package's responsibility to track; the live smoke is the drift detector.
+- **The Tavily wire contract is pinned to its 2026-08 public documentation.** Field names (`search_depth`, `include_answer`, `max_results`) are this package's responsibility to track; the live smoke is the drift detector, last green against the live API at v0.1.1.
 - **`include_domains` / `exclude_domains` / `days` are not exposed.** The seam's request carries only `query` and `maxResults` today; domain filtering would be provider config rather than a per-call control, and no consumer has asked for it yet.
 - **No retry policy.** A transient Tavily failure surfaces as one `WEB_PROVIDER_ERROR`; retrying is left to the caller or a future seam-level policy, matching the in-tree providers.
 - **dsh is in developer preview.** This package pins `@deepseek-ai/dsh-web` to the currently published pre-release; expect lockstep bumps while upstream iterates.

@@ -72,11 +72,11 @@ npm test                      # 无 key：回环替身断言线上形状与错�
 TAVILY_API_KEY=tvly-... npm test   # 追加真机冒烟（无 key 自跳过）
 ```
 
-无 key 测试用回环 HTTP 替身驱动真 provider，断言精确的请求形状（方法、路径、bearer 头、user-agent、body 字段）、响应映射、错误分类与取消。真机冒烟对真实 API 验证线上契约，无 key 自跳过。
+无 key 测试用回环 HTTP 替身驱动真 provider，断言精确的请求形状（方法、路径、bearer 头、user-agent、body 字段）、响应映射、错误分类与取消。真机冒烟对真实 API 验证线上契约，无 key 自跳过；v0.1.1（2026-08）已对真实 Tavily API 验证通过。
 
 ## Known Limitations and Deferred Work
 
-- **Tavily 线上契约钉在其 2026-08 公开文档。** 字段名（`search_depth`、`include_answer`、`max_results`）由本包负责跟踪；真机冒烟是漂移探测器。
+- **Tavily 线上契约钉在其 2026-08 公开文档。** 字段名（`search_depth`、`include_answer`、`max_results`）由本包负责跟踪；真机冒烟是漂移探测器，v0.1.1 已对真实 API 验证为绿。
 - **未暴露 `include_domains` / `exclude_domains` / `days`。** 接缝的请求今天只携带 `query` 与 `maxResults`；域名过滤应是 provider 配置而非逐调用控制，且尚无消费者提出需求。
 - **无重试策略。** 瞬态 Tavily 失败呈现为一次 `WEB_PROVIDER_ERROR`；重试留给调用方或未来的接缝级策略，与树内 provider 一致。
 - **dsh 处于 developer preview。** 本包钉在当前发布的预发布版 `@deepseek-ai/dsh-web` 上；上游迭代期间预期需要跟随升版。
