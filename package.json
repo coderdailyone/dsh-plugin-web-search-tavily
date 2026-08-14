@@ -1,0 +1,60 @@
+{
+  "name": "dsh-plugin-web-search-tavily",
+  "version": "0.1.0",
+  "description": "Tavily search provider bundle for DeepSeek Harness (dsh): registers a WebSearchProvider into ctx.web",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-web": "0.0.1-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-web": "0.0.1-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "tavily",
+    "web-search",
+    "agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderdailyone/dsh-plugin-web-search-tavily.git"
+  },
+  "license": "MIT"
+}

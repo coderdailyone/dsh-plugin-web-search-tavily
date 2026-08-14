@@ -1,0 +1,7 @@
+# Bundle layer applied when a profile lists this package. Inserts the Tavily
+# search provider row; provider SELECTION stays with the deployment — pin it
+# with `searchProvider: tavily` on the `web` row (or `$DSH_WEB_SEARCH_PROVIDER`)
+# when more than one search provider is usable.
+- insert:
+    - id: web-search-tavily
+      name: dsh-plugin-web-search-tavily
