@@ -56,5 +56,9 @@
     "type": "git",
     "url": "git+https://github.com/coderdailyone/dsh-plugin-web-search-tavily.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
 }
