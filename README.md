@@ -1,6 +1,16 @@
-# dsh-plugin-web-search-tavily
+<p align="center">
+  <img src="https://raw.githubusercontent.com/coderdailyone/dsh-plugin-web-search-tavily/main/docs/assets/banner.svg" alt="dsh-plugin-web-search-tavily — Tavily backend for dsh's built-in web_search" width="100%">
+</p>
 
-English | [中文](README.zh.md)
+<p align="center">
+  <a href="https://www.npmjs.com/package/dsh-plugin-web-search-tavily"><img src="https://img.shields.io/npm/v/dsh-plugin-web-search-tavily?color=14b8a6&label=npm" alt="npm version"></a>
+  <img src="https://img.shields.io/npm/l/dsh-plugin-web-search-tavily?color=34d399" alt="license">
+  <a href="https://github.com/deepseek-ai/deepseek-harness/discussions/2021"><img src="https://img.shields.io/badge/dsh-Show%20Your%20Plugins!-0f766e" alt="dsh discussion"></a>
+</p>
+
+<p align="center">
+  <a href="#install">Install</a> · <a href="#config">Config</a> · <a href="#behavior">Behavior</a> · <a href="#model-experience">Model Experience</a> · <a href="./README.zh.md">中文文档</a>
+</p>
 
 A community [Tavily](https://tavily.com) search provider for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`). It registers a `WebSearchProvider` into the `ctx.web` capability seam, so the shipped `web_search` tool can be served by Tavily without touching any model-facing schema.
 

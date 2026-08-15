@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="dsh-plugin-web-search-tavily — Tavily backend for dsh's built-in web_search — a provider in the ctx.web seam.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#022c22"/>
+      <stop offset="1" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+
+  <g transform="translate(70,60)">
+    <rect width="180" height="180" rx="16" fill="#34d399" opacity="0.10"/>
+    <rect width="180" height="180" rx="16" fill="none" stroke="#34d399" stroke-width="2"/>
+    <circle cx="80" cy="80" r="42" fill="none" stroke="url(#accent)" stroke-width="9"/>
+    <line x1="112" y1="112" x2="148" y2="148" stroke="url(#accent)" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="80" cy="80" rx="18" ry="42" fill="none" stroke="#34d399" stroke-width="3" opacity="0.65"/>
+    <line x1="38" y1="80" x2="122" y2="80" stroke="#34d399" stroke-width="3" opacity="0.65"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace">
+    <text x="310" y="122" font-size="48" font-weight="700" fill="#f8fafc">dsh-plugin-web-search-tavily</text>
+  </g>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="310" y="166" font-size="23" fill="#cbd5e1">Tavily backend for dsh's built-in web_search — a provider in the ctx.web seam.</text>
+    <text x="310" y="200" font-size="19" fill="#94a3b8">给内置 web_search 换上 Tavily 后端，模型侧 schema 一字不动。</text>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">
+    <rect x="310" y="226" width="243" height="34" rx="17" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="330" y="248" fill="#34d399">✓</text>
+    <text x="350" y="248" fill="#99f6e4">ctx.web capability seam</text>
+    <rect x="569" y="226" width="219" height="34" rx="17" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="589" y="248" fill="#34d399">✓</text>
+    <text x="609" y="248" fill="#99f6e4">honest field mapping</text>
+    <rect x="804" y="226" width="235" height="34" rx="17" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <text x="824" y="248" fill="#34d399">✓</text>
+    <text x="844" y="248" fill="#99f6e4">keyless loopback tests</text>
+  </g>
+</svg>

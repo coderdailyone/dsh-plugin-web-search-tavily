@@ -1,6 +1,12 @@
-# dsh-plugin-web-search-tavily
+<p align="center">
+  <img src="https://raw.githubusercontent.com/coderdailyone/dsh-plugin-web-search-tavily/main/docs/assets/banner.svg" alt="dsh-plugin-web-search-tavily —— 给内置 web_search 换上 Tavily 后端" width="100%">
+</p>
 
-[English](README.md) | 中文
+<p align="center">
+  <a href="https://www.npmjs.com/package/dsh-plugin-web-search-tavily"><img src="https://img.shields.io/npm/v/dsh-plugin-web-search-tavily?color=14b8a6&label=npm" alt="npm 版本"></a>
+  <img src="https://img.shields.io/npm/l/dsh-plugin-web-search-tavily?color=34d399" alt="许可证">
+  <a href="https://github.com/deepseek-ai/deepseek-harness/discussions/2021"><img src="https://img.shields.io/badge/dsh-Show%20Your%20Plugins!-0f766e" alt="dsh 讨论帖"></a>
+</p>
 
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）的社区 [Tavily](https://tavily.com) 搜索 provider。它向 `ctx.web` 能力接缝注册一个 `WebSearchProvider`，让自带的 `web_search` 工具由 Tavily 提供服务，而不触碰任何模型面 schema。
 
